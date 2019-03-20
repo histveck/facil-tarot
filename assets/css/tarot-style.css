@@ -1,0 +1,225 @@
+
+/*------------------------------------------------------
+					General style
+--------------------------------------------------------*/
+
+ul, li, ol{list-style: none; margin: 0;padding: 0;}
+
+li {color: #313131; }
+.inline li{display: inline-block;vertical-align: top: ;}
+a, a:hover, a:focus, a:active{display: inline-block;vertical-align: top; color: #313131;text-decoration: none;}
+a:hover, a:focus, a:active{color: #313131;}
+img{display: inline-block; max-width: 100%;}
+
+form {position: relative; }
+
+.inline li {display: inline-block; position: relative; vertical-align: top; }
+
+
+section {padding: 2rem 0 0; }
+
+.card li {
+  width: 4%; z-index: 20; position: absolute; 
+  -webkit-transition: .5s ease 0s;
+  -moz-transition: .5s ease 0s;
+  -ms-transition: .5s ease 0s;
+  transition: .5s ease 0s;
+}
+.card li.block {z-index: 0; }
+.card li:nth-child(1) {left: 0%; }
+.card li:nth-child(2) {left: 4%; }
+.card li:nth-child(3) {left: 8%; }
+.card li:nth-child(4) {left: 12%; }
+.card li:nth-child(5) {left: 16%; }
+.card li:nth-child(6) {left: 20%; }
+.card li:nth-child(7) {left: 24%; }
+.card li:nth-child(8) {left: 28%; }
+.card li:nth-child(9) {left: 32%; }
+.card li:nth-child(10) {left: 36%; }
+.card li:nth-child(11) {left: 40%; }
+.card li:nth-child(12) {left: 44%; }
+.card li:nth-child(13) {left: 48%; }
+.card li:nth-child(14) {left: 52%; }
+.card li:nth-child(15) {left: 56%; }
+.card li:nth-child(16) {left: 60%; }
+.card li:nth-child(17) {left: 64%; }
+.card li:nth-child(18) {left: 68%; }
+.card li:nth-child(19) {left: 72%; }
+.card li:nth-child(20) {left: 76%; }
+.card li:nth-child(21) {left: 80%; }
+.card li:nth-child(22) {left: 84%; }
+
+.card.shake li:nth-child(5) {left: 0%; z-index: 1 }
+.card.shake li:nth-child(21) {left: 4%; z-index: 2 }
+.card.shake li:nth-child(22) {left: 8%; z-index: 3 }
+.card.shake li:nth-child(8) {left: 12%; z-index: 4 }
+.card.shake li:nth-child(16) {left: 16%; z-index: 5 }
+.card.shake li:nth-child(1) {left: 20%; z-index: 6 }
+.card.shake li:nth-child(2) {left: 24%; z-index: 7 }
+.card.shake li:nth-child(11) {left: 28%; z-index: 8 }
+.card.shake li:nth-child(18) {left: 32%; z-index: 9 }
+.card.shake li:nth-child(20) {left: 36%; z-index: 10 }
+.card.shake li:nth-child(3) {left: 40%;  z-index: 11 }
+.card.shake li:nth-child(12) {left: 44%; z-index: 12 }
+.card.shake li:nth-child(9) {left: 48%; z-index: 13 }
+.card.shake li:nth-child(17) {left: 52%; z-index: 14 }
+.card.shake li:nth-child(15) {left: 56%; z-index: 15}
+.card.shake li:nth-child(4) {left: 60%; z-index: 16 }
+.card.shake li:nth-child(10) {left: 64%; z-index: 17 }
+.card.shake li:nth-child(13) {left: 68%; z-index: 18 }
+.card.shake li:nth-child(19) {left: 72%; z-index: 19 }
+.card.shake li:nth-child(6) {left: 76%; z-index: 20 }
+.card.shake li:nth-child(7) {left: 80%; z-index: 21 }
+.card.shake li:nth-child(14) {left: 84%; z-index: 22 }
+
+.card li.cut-li {
+  left: 42.5%!important;
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: .5s ease 0s;
+  -moz-transition: .5s ease 0s;
+  -ms-transition: .5s ease 0s;
+  transition: .5s ease 0s;
+}
+.card ul {
+  left: 7px;
+  margin: 0 auto;
+  min-height: 220px;
+  position: relative;
+  width: 80%;
+}
+
+/*------------------------------------------------------
+          ANIMACION DE LAS CARTAS
+--------------------------------------------------------*/
+.card img {
+  max-width: inherit; 
+  top: 0;
+  width: 114px;
+  position: relative;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,0);
+  -ms-box-shadow: 0 0 5px rgba(0,0,0,0);
+  box-shadow: 0 0 5px rgba(0,0,0,0);
+  -webkit-transition: .5s ease 0s;
+  -moz-transition: .5s ease 0s;
+  -ms-transition: .5s ease 0s;
+  transition: .5s ease 0s;
+}
+.card .back-card.hover{
+  top: -10px;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,0.9);
+  -ms-box-shadow: 0 0 5px rgba(0,0,0,0.9);
+  box-shadow: 0 0 5px rgba(0,0,0,0.9);
+  -webkit-transition: .5s ease 0s;
+  -moz-transition: .5s ease 0s;
+  -ms-transition: .5s ease 0s;
+  transition: .5s ease 0s;
+}
+
+
+.card .hidden-card {
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  -webkit-transition: .5s ease 0s;
+  -moz-transition: .5s ease 0s;
+  -ms-transition: .5s ease 0s;
+  transition: .5s ease 0s;
+}
+.card .hidden-card.rotate-in {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transition: .5s ease 0s;
+  -moz-transition: .5s ease 0s;
+  -ms-transition: .5s ease 0s;
+  transition: .5s ease 0s;
+}
+
+
+.card .back-card{
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transition: .5s ease 0s;
+  -moz-transition: .5s ease 0s;
+  -ms-transition: .5s ease 0s;
+  transition: .5s ease 0s;
+}
+.card .back-card.rotate{
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  width: 114px;
+  -webkit-transition: .5s ease 0s;
+  -moz-transition: .5s ease 0s;
+  -ms-transition: .5s ease 0s;
+  transition: .5s ease 0s;
+}
+.hide-mask {
+  height: 218px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 114px;
+  z-index: 1000;
+}
+
+
+@media screen and (max-width: 980px){
+
+  .card ul {left: -36px; }
+  
+}
+
+@media screen and (max-width: 800px){
+  .card ul {left: -40px; }
+
+}
+
+
+
+
+@media screen and (max-width: 640px){
+
+  .card img {max-height: 120px; }
+  .card li {width: 3.8%; }
+  .card ul {left: -18px; }
+  h3 {font-size: 3.5rem; }
+  .card img, .card .back-card.rotate {width: auto; }
+  .dark-section .card-chosen {min-height: 490px; }
+
+}
+
+
+@media screen and (max-width: 500px){
+
+  header .col-xs-6 {text-align: center; width: 100%; }
+  .card li {margin: 0.2rem 0; width: 15%; }
+  .card ul {left: -6px; min-height: 120px; }
+  footer nav a, footer nav span {margin: 0 2rem 0.5rem 0; }
+  .subfooter {padding: 5rem 1.5rem; }
+  .subfooter p {font-size: 3.1rem; }
+  .dark-section .card-chosen {min-height: 300px; }
+  .other-tarot li {width: 100% !important; }
+}
+
+
+@media screen and (max-width: 320px){
+
+  .card ul {left: -11px; }
+  .btn-group .button {margin: 1rem 0; }
+  .dark-section .card-chosen {min-height: 270px; }
+  h2 {font-size: 3rem; line-height: 3rem; }
+
+}
+
