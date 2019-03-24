@@ -15,7 +15,9 @@ form {position: relative; }
 
 .inline li {display: inline-block; position: relative; vertical-align: top; }
 
-
+.cut-btn{
+  cursor:pointer;
+}
 section {padding: 2rem 0 0; }
 
 .card li {

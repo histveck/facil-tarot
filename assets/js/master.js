@@ -157,7 +157,7 @@ $(document).ready(function () {
         if ( oLimit <= ulWidth ) {
           setTimeout(function(){ $('.card .back-card.rotate + .hidden-card').parent('a').parent('li').animate({top: "+=-240px"}, 100, "linear", function() { }); },250);
         }else{
-          setTimeout(function(){ $('.card .back-card.rotate + .hidden-card').parent('a').parent('li').animate({top: "+=240px"}, 100, "linear", function() { }); },250);
+          setTimeout(function(){ $('.card .back-card.rotate + .hidden-card').parent('a').parent('li').animate({top: "+=-240px"}, 100, "linear", function() { }); },250);
         }
 
       }else{

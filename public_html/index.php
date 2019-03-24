@@ -160,8 +160,8 @@
                                 </div>
                                 <div class="col-md-2">
                                 </div>
-                                <div class="col-md-5 text-center">
-                                    <button class="btn btn-info btn-block cut-btn" href="javascript:void(0)" title="Cortar cartas">Cortar</button>
+                                <div class="col-md-5 text-center cut-btn">
+                                    <button class="btn btn-info btn-block" href="javascript:void(0)" title="Cortar cartas">Cortar</button>
                                 </div>
                             </div>
                         </div>
