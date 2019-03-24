@@ -44,7 +44,7 @@ function facil_tarot_scripts() {
     //SCRIPTS
     wp_register_script('bootstrap-js', plugins_url( '/assets/js/bootstrap.js', __FILE__ ), array('jquery'), '4.3', false);
     wp_register_script('picture-fill', plugins_url( '/assets/js/picturefill.min.js', __FILE__ ));
-    wp_register_script('master-script',plugins_url( '/assets/js/master.js', __FILE__ ));
+    wp_register_script('master-script',plugins_url( '/assets/js/master.js', __FILE__ ), false, 1.0, true);
 
     wp_enqueue_script('bootstrap-js');
     wp_enqueue_script('picture-fill');
