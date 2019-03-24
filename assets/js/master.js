@@ -184,7 +184,7 @@ $(document).ready(function () {
       setTimeout(function() {
         var redireccionaA = 'https://www.tarotinteractivo.com/tarot/resultado-amor/'
         window.location = redireccionaA
-      },10000)
+      },5000)
 
       //alert('Ya ha seleccionado sus 10 cartas');
 
