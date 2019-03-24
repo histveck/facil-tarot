@@ -179,6 +179,8 @@ $(document).ready(function () {
 
     } else{
       // acá ya tiene 10
+      $("#tarot-section").hide()
+      $("#loader-animation").show()
       setTimeout(function() {
         var redireccionaA = 'https://www.tarotinteractivo.com/tarot/resultado-amor/'
         window.location = redireccionaA
