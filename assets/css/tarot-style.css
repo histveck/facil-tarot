@@ -252,3 +252,98 @@ section {padding: 2rem 0 0; }
 
 }
 
+
+/******
+  Preloader Anderson
+**************/
+.mensaje h1{
+    position: absolute;
+    right:43%;
+    bottom:75%;
+    text-shadow: 3px 3px 5px #f00,
+               6px 6px 5px #0f0,
+               9px 9px 5px #00f;
+}
+
+.mensaje2 h1{
+    position: absolute;
+    right:42%;
+    bottom:20%;
+    text-shadow: 3px 3px 5px #f00,
+               6px 6px 5px #0f0,
+               9px 9px 5px #00f;
+      
+}
+.imagen{
+    position: absolute;
+    right: 44%;
+    bottom:30%;
+ }
+
+
+@keyframes spin 
+{ 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.chip:hover {
+  animation:spin 4s linear infinite;
+}
+
+
+.pre-loader{
+    position: absolute;
+    right: 49%;
+    bottom:15%;
+
+}
+
+.pre-loader span{
+    height:2em ;
+    width: 2em ;
+    background:whitesmoke;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    animation:wave 2s ease-in-out infinite;
+}
+
+.pre-loader span:nth-child(1){
+    left: -4.5em;
+    animation-delay: 0s;
+
+}
+
+.pre-loader span:nth-child(2){
+    left: -1.5em;
+    animation-delay: 0.1s;
+
+}
+
+.pre-loader span:nth-child(3){
+    left: 1.5em;
+    animation-delay: 0.2s;
+}
+
+.pre-loader span:nth-child(4){
+    left: 4.5em;
+    animation-delay: 0.3;
+
+}
+
+@keyframes wave{
+    0%,
+    75%,
+    100%{
+        transform: translateY(0) scale(1)
+
+    }
+    25%{
+        transform: translateY(2.5em);
+
+    }
+    50%{
+        transform: translateY(-2.5em) scale(1.1);
+    }
+
+}
