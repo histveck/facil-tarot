@@ -17,8 +17,6 @@ function card_path_img() {
     return $path_img;
 }
 
-
-
 function wpb_hook_javascript() {
     ?>
         <script type="text/javascript">
@@ -26,13 +24,6 @@ function wpb_hook_javascript() {
         </script>
     <?php
 }
-
-function tarot_redirections() {
-
-
-
-}
-
 
 function facil_tarot_scripts() {
 
@@ -62,7 +53,6 @@ function facil_tarot_scripts() {
 }
 
 
-
 function facil_tarot_function() {
     $tarot_index = include( plugin_dir_path(__FILE__).'/public_html/index.php');
     return $tarot_index;
@@ -71,4 +61,5 @@ add_action('wp_head', 'wpb_hook_javascript');
 add_action( 'wp_enqueue_scripts', 'facil_tarot_scripts');
 add_shortcode('facil_tarot', 'facil_tarot_function');
 
-//Shortcode: [facil_tarot]
+
+
