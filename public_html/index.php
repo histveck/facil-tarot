@@ -1,4 +1,6 @@
-<section class="tarot-section" id="tarot-section"> 
+<h2 class="text-center">Usted debe elegir 10 cartas</h2>
+
+<section class="tarot-section" id="tarot-section">
     <div class="container">
         <div class="loading"></div>
         <div class="row row-card pt-5 pb-5">
