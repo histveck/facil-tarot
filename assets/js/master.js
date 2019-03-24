@@ -9,79 +9,79 @@ $(document).ready(function () {
       NombreMaximum = 22,
       TirageEffectue = new Array();
 
-    $('#tarot-section').css({
-      'margin-top': '100px',
-      'padding-top': '100px'
-    })
-    if ( oWindowWidth <= 640 ) {
-      $('.detail.row').remove().clone().insertAfter('.row.row-card');
+  $('#tarot-section').css({
+    'margin-top': '100px',
+    'padding-top': '100px'
+  })
+  if ( oWindowWidth <= 640 ) {
+    $('.detail.row').remove().clone().insertAfter('.row.row-card');
 
+  }
+
+  function nombreAleatoire(){
+    return Math.floor(Math.random() * NombreMaximum) + 1;
+  }
+
+  function dejaPresent(Nombre){
+    var Element, Valeur;
+    for(var i = 1; i <= NombreDeCases; i++){
+      Element = document.getElementById('card' + i);
+      // Si il existe
+      if(Element){
+        Valeur = $(this).attr('data-rank');
+        if( Valeur == Nombre)
+        {
+          return true;
+        }
+      }
     }
+    return false;
+  }
 
-    function nombreAleatoire(){
-      return Math.floor(Math.random() * NombreMaximum) + 1;
-    }
+  function tirageAleatoire(Numero)
+  {
+    if(!TirageEffectue[Numero])
+    {
+      var Element = document.getElementById('card' + Numero);
+      if(Element)
+      {
+        var Aleatoire,
+            dejaPresent  =  0;
+        Aleatoire = nombreAleatoire();
+        for (var i = 1; i <= NombreDeCases; i++) {
+          var oData   =  $('#card' + i).attr('data-rank');
+          if ( oData == Aleatoire ) {
+            dejaPresent++;
+          }
+        }
 
-    function dejaPresent(Nombre){
-      var Element, Valeur;
-      for(var i = 1; i <= NombreDeCases; i++){
-          Element = document.getElementById('card' + i);
-          // Si il existe
-          if(Element){
-            Valeur = $(this).attr('data-rank');
-            if( Valeur == Nombre)
-            {
-              return true;
+        while (dejaPresent > 0) {
+          var Aleatoire,
+              dejaPresent  =  0;
+          Aleatoire = nombreAleatoire();
+          for (var i = 1; i <= NombreDeCases; i++) {
+            var oData   =  $('#card' + i).attr('data-rank');
+            if ( oData == Aleatoire ) {
+              dejaPresent++;
             }
           }
+        }
+
+        $('#card' + Numero).attr('data-rank', Aleatoire);
+
+        Element.innerHTML = '<a href=""> <img src="'+path_img+'" alt="card" class="back-card"> ' + '<img src="'+path_img+'" alt="card" class="hidden-card"> </a>'
+
       }
-      return false;
+      TirageEffectue[Numero] = true;
     }
+  }
 
-    function tirageAleatoire(Numero)
-    {
-            if(!TirageEffectue[Numero])
-            {
-              var Element = document.getElementById('card' + Numero);
-              if(Element)
-              {       
-                      var Aleatoire, 
-                          dejaPresent  =  0;
-                      Aleatoire = nombreAleatoire();
-                      for (var i = 1; i <= NombreDeCases; i++) {
-                        var oData   =  $('#card' + i).attr('data-rank');
-                        if ( oData == Aleatoire ) {
-                          dejaPresent++;
-                        }
-                      }
-
-                      while (dejaPresent > 0) {
-                          var Aleatoire, 
-                              dejaPresent  =  0;
-                          Aleatoire = nombreAleatoire();
-                          for (var i = 1; i <= NombreDeCases; i++) {
-                            var oData   =  $('#card' + i).attr('data-rank');
-                            if ( oData == Aleatoire ) {
-                              dejaPresent++;
-                            }
-                          }
-                      }
-                      
-                      $('#card' + Numero).attr('data-rank', Aleatoire);
-
-                      Element.innerHTML = '<a href=""> <img src="" alt="card" class="back-card"> ' + '<img src="" alt="card" class="hidden-card"> </a>'
-                      
-              }
-              TirageEffectue[Numero] = true;
-            }
-    }
-
-    for (var i = 1; i <= 22; i++) {
-      tirageAleatoire(i);
-    }
+  for (var i = 1; i <= 22; i++) {
+    tirageAleatoire(i);
+  }
 
 
-  
+
   (function ($) {
     $.fn.vAlign = function() {
       var j   =   0;
@@ -89,7 +89,7 @@ $(document).ready(function () {
         var oHeight   =   $(this).height();
         if (oHeight >= j) {
           j = oHeight;
-        } 
+        }
       })
       $(this).css('height', j);
     };
@@ -103,19 +103,19 @@ $(document).ready(function () {
       });
     }, 2000);
   }
-  
+
 
 
   $('.card a').hover(function(){
-      $(this).children('img').addClass('hover');
-   },function(){      
-      $(this).children('img').removeClass('hover');
+    $(this).children('img').addClass('hover');
+  },function(){
+    $(this).children('img').removeClass('hover');
   });
 
 
 
   $('.card li a').click(function() {
-    
+
     //$('.mask').show();
 
     var oHtml   =   $(this).children('.hidden-card').attr('src');
@@ -123,33 +123,33 @@ $(document).ready(function () {
 
     if ( oWindowWidth > 500) {
       var   p           = $( this ).parent('li'),
-            cardWidth   = ($(this).children('img').width()) / 2,
-            maskWidth   = $(this).children('img').width(),
-            maskheight  = $(this).children('img').height(),
-            toMove      = cardWidth * nbrCard,
-            ulWidth     = p.parent('ul').width(),
-            oLimit      = toMove + cardWidth;
+          cardWidth   = ($(this).children('img').width()) / 2,
+          maskWidth   = $(this).children('img').width(),
+          maskheight  = $(this).children('img').height(),
+          toMove      = cardWidth * nbrCard,
+          ulWidth     = p.parent('ul').width(),
+          oLimit      = toMove + cardWidth;
     }else{
       var   p           = $( this ).parent('li'),
-            cardWidth   = ($(this).children('img').width()) / 3,
-            maskWidth   = $(this).children('img').width(),
-            maskheight  = $(this).children('img').height(),
-            toMove      = cardWidth * nbrCard,
-            ulWidth     = p.parent('ul').width(),
-            oLimit      = toMove + cardWidth;
+          cardWidth   = ($(this).children('img').width()) / 3,
+          maskWidth   = $(this).children('img').width(),
+          maskheight  = $(this).children('img').height(),
+          toMove      = cardWidth * nbrCard,
+          ulWidth     = p.parent('ul').width(),
+          oLimit      = toMove + cardWidth;
     }
 
     $('<div class="hide-mask"></div>').insertBefore('.card li a');
     $('.hide-mask').css('width', maskWidth).css('height', maskheight);
 
-    
+
     $(this).parent('li').css('z-index', 23);
 
-    if ( oNbCard <= 10 ) {
+    if ( oNbCard < 10 ) {
       $(this).children('.back-card').addClass('rotate');
       $(this).children('.back-card').delay(250).fadeOut();
-      setTimeout(function(){ $('.card .back-card.rotate').removeClass('rotate'); },1000);    
-      setTimeout(function(){ $('.card .back-card.rotate + .hidden-card').addClass('rotate-in'); },200);   
+      setTimeout(function(){ $('.card .back-card.rotate').removeClass('rotate'); },1000);
+      setTimeout(function(){ $('.card .back-card.rotate + .hidden-card').addClass('rotate-in'); },200);
 
       $('.card li').addClass('block');
 
@@ -159,7 +159,7 @@ $(document).ready(function () {
         }else{
           setTimeout(function(){ $('.card .back-card.rotate + .hidden-card').parent('a').parent('li').animate({top: "+=240px"}, 100, "linear", function() { }); },250);
         }
-        
+
       }else{
         setTimeout(function(){ $('.card .back-card.rotate + .hidden-card').parent('a').parent('li').animate({top: "+=-150px"}, 100, "linear", function() { }); },250);
       }
@@ -171,21 +171,23 @@ $(document).ready(function () {
 
       $(this).parent('li').css('z-index', zIndex);
 
-      if ( oNbCard == 10 ) {
-        //aqui se pone la accion que se va a seguir al cuando se tengan las 10 cartas
-        //setTimeout(function(){  $('.send-form').submit(); },1000);
-      }
-      
+
+
       nbrCard++;
       oNbCard++;
       zIndex++;
 
-    }else{
+    } else{
+      // acá ya tiene 10
+      setTimeout(function() {
+        var redireccionaA = 'https://www.tarotinteractivo.com/tarot/resultado-amor/'
+        window.location = redireccionaA
+      },3000)
 
-      alert('Ya ha seleccionado sus 10 cartas');
+      //alert('Ya ha seleccionado sus 10 cartas');
 
     }
-    
+
     return false;
 
   })
@@ -222,8 +224,8 @@ $(document).ready(function () {
   $('.card-chosen a').click(function(){
 
     var   maskWidth   = $(this).children('img').width(),
-          maskheight  = $(this).children('img').height(),
-          maskleft    = -(maskWidth / 2);
+        maskheight  = $(this).children('img').height(),
+        maskleft    = -(maskWidth / 2);
 
     if ( oInit == 3 ) {
 
@@ -234,7 +236,7 @@ $(document).ready(function () {
 
     oInit++;
 
-    
+
 
     return false;
 
@@ -246,7 +248,7 @@ $(document).ready(function () {
 
 
 $( window ).resize(function() {
-  
+
   var oWindowWidth  = $(window).width(),
       oWindowHeight = $(window).height();
 
@@ -257,7 +259,7 @@ $( window ).resize(function() {
         var oHeight   =   $(this).height();
         if (oHeight >= j) {
           j = oHeight;
-        } 
+        }
       })
       $(this).css('height', j);
     };
