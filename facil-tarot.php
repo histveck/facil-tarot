@@ -53,8 +53,11 @@ function facil_tarot_function() {
     return $tarot_index;
 }
 
+
+//Actions
 add_action('wp_head', 'wpb_hook_javascript');
 add_action( 'wp_enqueue_scripts', 'facil_tarot_scripts');
+//Shortcodes
 add_shortcode('facil_tarot', 'facil_tarot_function');
 
 
