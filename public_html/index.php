@@ -1,5 +1,4 @@
 <h2 class="text-center">Usted debe elegir 10 cartas</h2>
-
 <section class="tarot-section" id="tarot-section">
     <div class="container">
         <div class="loading"></div>
@@ -186,7 +185,7 @@ background:'<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>'">
         <h1 style="color: white" class="">Resultado</h1>
     </div>
     <div class="imagen">
-        <marquee HEIGHT=300 DIRECTION="down"> 
+        <marquee height=300 direction="down">
             <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>">
         </marquee> 
     </div>
