@@ -31,19 +31,14 @@ function facil_tarot_scripts() {
     wp_deregister_script('jquery');
     wp_register_script('jquery-script', plugins_url('assets/js/vendor/jquery-3.3.1.min.js',__FILE__), false, '3.3.1');
     wp_enqueue_script('jquery-script');
-
     //SCRIPTS
     wp_register_script('bootstrap-js', plugins_url( '/assets/js/bootstrap.js', __FILE__ ), array('jquery'), '4.3', false);
     wp_register_script('picture-fill', plugins_url( '/assets/js/picturefill.min.js', __FILE__ ));
     wp_register_script('master-script',plugins_url( '/assets/js/master.js', __FILE__ ), false, 1.0, true);
-
     wp_enqueue_script('bootstrap-js');
     wp_enqueue_script('picture-fill');
     wp_enqueue_script('master-script');
-
-
     //STYLES
-
     wp_register_style('bootstrap-style', plugins_url( '/assets/css/bootstrap.css', __FILE__ ));
     wp_enqueue_style('bootstrap-style');
     wp_register_style('animation-style', plugins_url( '/assets/css/animation.css', __FILE__ ));
@@ -57,6 +52,7 @@ function facil_tarot_function() {
     $tarot_index = include( plugin_dir_path(__FILE__).'/public_html/index.php');
     return $tarot_index;
 }
+
 add_action('wp_head', 'wpb_hook_javascript');
 add_action( 'wp_enqueue_scripts', 'facil_tarot_scripts');
 add_shortcode('facil_tarot', 'facil_tarot_function');
