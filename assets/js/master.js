@@ -182,7 +182,7 @@ $(document).ready(function () {
       $("#tarot-section").hide()
       $("#loader-animation").show()
       setTimeout(function() {
-        var redireccionaA = "https://www.google.com";
+        var redireccionaA = page_redirect;
         window.location = redireccionaA
       },5000)
 
