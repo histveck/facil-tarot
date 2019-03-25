@@ -21,6 +21,7 @@ function wpb_hook_javascript() {
     ?>
         <script type="text/javascript">
           var path_img ="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>"
+          var page_redirect ="AQUICODIGOPHP"
         </script>
     <?php
 }
