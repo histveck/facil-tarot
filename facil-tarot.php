@@ -54,6 +54,12 @@ function facil_tarot_function() {
 }
 
 
+function resultado_amor() {
+    $dir = load_template( dirname( __FILE__ ) . '/templates/resultado_amor.php' );
+    return $dir;
+}
+
+
 //Actions
 add_action('wp_head', 'wpb_hook_javascript');
 add_action( 'wp_enqueue_scripts', 'facil_tarot_scripts');
