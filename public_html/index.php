@@ -176,20 +176,10 @@
 background-attachment: fixed;
 background-repeat: no-repeat;
 display: none; 
-background:'<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>'">
+background:'<?php echo plugins_url('/img/fondo.jpg', __FILE__ ); ?>'">
     <div class="mensaje">
         <h1 style="color: white">Cargando</h1>
     </div>
-    
-    <div class="mensaje2">
-        <h1 style="color: white" class="">Resultado</h1>
-    </div>
-    <div class="imagen">
-        <marquee height=300 direction="down">
-            <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>">
-        </marquee> 
-    </div>
-
     <div class="pre-loader">
         <span></span>
         <span></span>
