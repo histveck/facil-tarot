@@ -6,7 +6,7 @@
 ul, li, ol{list-style: none; margin: 0;padding: 0;}
 
 li {color: #313131; }
-.inline li{display: inline-block;vertical-align: top: ;}
+.inline li{display: inline-block;vertical-align: top;}
 a, a:hover, a:focus, a:active{display: inline-block;vertical-align: top; color: #313131;text-decoration: none;}
 a:hover, a:focus, a:active{color: #313131;}
 img{display: inline-block; max-width: 100%;}
@@ -258,28 +258,12 @@ section {padding: 2rem 0 0; }
 **************/
 .mensaje h1{
     position: absolute;
-    right:43%;
-    bottom:75%;
+    right:580px;
+    bottom:65%;
     text-shadow: 3px 3px 5px #f00,
                6px 6px 5px #0f0,
                9px 9px 5px #00f;
 }
-
-.mensaje2 h1{
-    position: absolute;
-    right:42%;
-    bottom:20%;
-    text-shadow: 3px 3px 5px #f00,
-               6px 6px 5px #0f0,
-               9px 9px 5px #00f;
-      
-}
-.imagen{
-    position: absolute;
-    right: 44%;
-    bottom:30%;
- }
-
 
 @keyframes spin 
 { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
@@ -292,7 +276,7 @@ section {padding: 2rem 0 0; }
 .pre-loader{
     position: absolute;
     right: 49%;
-    bottom:15%;
+    bottom:55%;
 
 }
 
