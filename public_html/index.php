@@ -173,10 +173,10 @@
     </div>
 </section>
 <div id="loader-animation" style="
-background-attachment: fixed;
-background-repeat: no-repeat;
-display: none; 
-background:'<?php echo plugins_url('/img/fondo.jpg', __FILE__ ); ?>'">
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: none;
+        background:'<?php echo plugins_url('/img/fondo.jpg', __FILE__ ); ?>'">
     <div class="mensaje">
         <h1 style="color: white">Cargando</h1>
     </div>
@@ -185,5 +185,5 @@ background:'<?php echo plugins_url('/img/fondo.jpg', __FILE__ ); ?>'">
         <span></span>
         <span></span>
         <span></span>
-    </div>  
+    </div>
 </div>
