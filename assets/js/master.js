@@ -179,6 +179,7 @@ $(document).ready(function () {
 
     } else{
       // acá ya tiene 10
+      setTimeout(function() {},2000)
       $("#tarot-section").hide()
       $("#loader-animation").show()
       setTimeout(function() {
