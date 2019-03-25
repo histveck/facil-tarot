@@ -56,7 +56,7 @@ function facil_tarot_function() {
 
 
 function resultado_amor() {
-    $dir = load_template( dirname( __FILE__ ) . '/templates/resultado_amor.php' );
+    $dir = load_template( dirname( __FILE__ ) . '/templates/resultado-amor.php' );
     return $dir;
 }
 
