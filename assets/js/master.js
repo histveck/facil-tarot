@@ -182,7 +182,7 @@ $(document).ready(function () {
       $("#tarot-section").hide()
       $("#loader-animation").show()
       setTimeout(function() {
-        var redireccionaA = 'https://www.tarotinteractivo.com/tarot/resultado-amor/'
+        var redireccionaA = "https://www.google.com";
         window.location = redireccionaA
       },5000)
 
