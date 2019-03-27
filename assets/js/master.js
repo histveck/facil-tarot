@@ -116,7 +116,7 @@ $(document).ready(function () {
 
   $('.card li a').click(function() {
 
-    //$('.mask').show();
+
 
     var oHtml   =   $(this).children('.hidden-card').attr('src');
     $('input[name="card-' + oNbCard + '"]').val(oHtml);
@@ -145,7 +145,7 @@ $(document).ready(function () {
 
     $(this).parent('li').css('z-index', 23);
 
-    if ( oNbCard < 10 ) {
+    if ( oNbCard <= 10 ) {
       $(this).children('.back-card').addClass('rotate');
       $(this).children('.back-card').delay(250).fadeOut();
       setTimeout(function(){ $('.card .back-card.rotate').removeClass('rotate'); },1000);
@@ -161,7 +161,7 @@ $(document).ready(function () {
         }
 
       }else{
-        setTimeout(function(){ $('.card .back-card.rotate + .hidden-card').parent('a').parent('li').animate({top: "+=-150px"}, 100, "linear", function() { }); },250);
+        setTimeout(function(){ $('.card .back-card.rotate + .hidden-card').parent('a').parent('li').animate({top: "+=-240px"}, 100, "linear", function() { }); },250);
       }
 
       setTimeout(function(){ $('.card .back-card.rotate + .hidden-card').parent('a').parent('li').animate({left: toMove}, 100, "linear", function() { }); },500);
@@ -177,20 +177,25 @@ $(document).ready(function () {
       oNbCard++;
       zIndex++;
 
+      if ( oNbCard == 10){
+        setTimeout(function() {
+          $("#tarot-section").hide()
+          $("#loader-animation").show()
+        },3300)
+        setTimeout(function() {
+              var redireccionaA = page_redirect;
+              window.location = redireccionaA
+        },5000)   
+      }
+
+
     } else{
       // acá ya tiene 10
-      setTimeout(function() {
-        $("#tarot-section").hide()
-        $("#loader-animation").show()
-
-      },2000)
       
-      setTimeout(function() {
-        var redireccionaA = page_redirect;
-        window.location = redireccionaA
-      },5000)
+          
 
-      //alert('Ya ha seleccionado sus 10 cartas');
+
+    
 
     }
 

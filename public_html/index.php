@@ -21,7 +21,7 @@
                     <ul class="inline">
                         <li id="card1" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo esc_url( plugins_url( 'img/back-card.png', __FILE__ ) ); ?>" alt="card" class="back-card">
+                                <img src="<?php echo esc_url( plugins_url( '/img/back-card.png', __FILE__ ) ); ?>" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
@@ -171,12 +171,8 @@
         </div>
     </div>
 </section>
-<div id="loader-animation" style="
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        display: none;
-        background:'<?php echo plugins_url('/img/fondo.jpg', __FILE__ ); ?>'">
-    <div class="mensaje">
+<div style="display: none;" id="loader-animation" class="col-lg-12 col-md-12 text-center">
+    <div class="mensaje mb-3 pb-3">
         <h1 style="color: white">Cargando</h1>
     </div>
     <div class="pre-loader">

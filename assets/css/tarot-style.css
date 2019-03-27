@@ -253,13 +253,18 @@ section {padding: 2rem 0 0; }
 }
 
 
-/******
+/********************
   Preloader Anderson
 **************/
+#loader-animation{
+  min-height: 300px;
+  width: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url('../../img/fondo.jpg');
+}
+
 .mensaje h1{
-    position: absolute;
-    right:580px;
-    bottom:65%;
     text-shadow: 3px 3px 5px #f00,
                6px 6px 5px #0f0,
                9px 9px 5px #00f;
@@ -276,7 +281,6 @@ section {padding: 2rem 0 0; }
 .pre-loader{
     position: absolute;
     right: 49%;
-    bottom:55%;
 
 }
 
