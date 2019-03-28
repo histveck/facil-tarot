@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <h2 class="text-center">Usted debe elegir <?php echo $facil_tarot_atts['num_card'] ?> cartas</h2>
 <section class="tarot-section" id="tarot-section">
     <div class="container">
@@ -21,133 +22,133 @@
                     <ul class="inline">
                         <li id="card1" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo esc_url( plugins_url( '/img/back-card.png', __FILE__ ) ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card2" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card3" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card4" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card5" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card6" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card7" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card8" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card9" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card10" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                               <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card11" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card12" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card13" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card14" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card15" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card16" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card17" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card18" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card19" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card20" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card21" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                               <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
                         <li id="card22" data-rank="">
                             <a href="javascript:void(0)">
-                                <img src="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>" alt="card" class="back-card">
+                                <img src="" alt="card" class="back-card">
                                 <img src="" alt="card" class="hidden-card">
                             </a>
                         </li>
@@ -161,7 +162,7 @@
                                 <div class="col-md-2">
                                 </div>
                                 <div class="col-md-5 text-center cut-btn">
-                                    <button class="btn btn-info btn-block" href="javascript:void(0)" title="Cortar cartas">Cortar</button>
+                                    <button class="btn btn-info btn-block" title="Cortar cartas">Cortar</button>
                                 </div>
                             </div>
                         </div>
@@ -182,3 +183,6 @@
         <span></span>
     </div>
 </div>
+
+
+<?php ob_end_flush(); ?>
