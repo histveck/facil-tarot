@@ -1,9 +1,8 @@
 <?php
-
 /*
 Plugin Name: Facil Tarot
 Plugin URI: https://www.tarotinteractivo.com/tarot/
-Description: Plugin de Tarot, para activarlo en cualquier página usar el shortcode: [facil_tarot]
+Description: Plugin de Tarot, para activarlo en cualquier página usar el shortcode: [facil_tarot num_card=NUM id_page=ID]
 Version: 1.0
 Author: Luis A, Dervins Maswer & Anderson Hernández
 Author URI: https://stackcreativo.com.ve
@@ -11,17 +10,10 @@ License: GPL2
 */
 
 
-function card_path_img() {
-
-    $path_img = plugins_url('/img/back-card.png', __FILE__ );
-    return $path_img;
-}
-
 function wpb_hook_javascript() {
     ?>
         <script type="text/javascript">
           var path_img ="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>"
-          var page_redirect ="AQUICODIGOPHP"
         </script>
     <?php
 }
@@ -49,23 +41,33 @@ function facil_tarot_scripts() {
 }
 
 
-function facil_tarot_function() {
+
+function facil_tarot_shortcode($atts = [], $content = null, $tag = '')
+{
+    // normalize attribute keys, lowercase
+    $atts = array_change_key_case((array)$atts, CASE_LOWER);
+    // override default attributes with user attributes
+    $facil_tarot_atts = shortcode_atts([
+                                     'num_card' =>10,
+                                     'id_page' =>0,
+                                     'url_page'=>'',
+                                 ], $atts, $tag);
+    $page_link = get_page_link($facil_tarot_atts['id_page']);
+    // return output
     $tarot_index = include( plugin_dir_path(__FILE__).'/public_html/index.php');
     return $tarot_index;
 }
 
 
-function resultado_amor() {
-    $dir = load_template( dirname( __FILE__ ) . '/templates/resultado-amor.php' );
-    return $dir;
+
+function facil_tarot_shortcodes_init()
+{
+    add_shortcode('facil_tarot', 'facil_tarot_shortcode');
 }
+ 
 
 
 //Actions
+add_action('init', 'facil_tarot_shortcodes_init');
 add_action('wp_head', 'wpb_hook_javascript');
 add_action( 'wp_enqueue_scripts', 'facil_tarot_scripts');
-//Shortcodes
-add_shortcode('facil_tarot', 'facil_tarot_function');
-
-
-

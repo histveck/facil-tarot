@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+  var num_card=$("#cartas-list").data('num-card')
   var oWindowWidth  = $(window).width(),
       oWindowHeight = $(window).height(),
       oNbCard       = 1,
@@ -145,7 +145,7 @@ $(document).ready(function () {
 
     $(this).parent('li').css('z-index', 23);
 
-    if ( oNbCard <= 10 ) {
+    if ( oNbCard <= parseInt(num_card)+1 ) {
       $(this).children('.back-card').addClass('rotate');
       $(this).children('.back-card').delay(250).fadeOut();
       setTimeout(function(){ $('.card .back-card.rotate').removeClass('rotate'); },1000);
@@ -177,14 +177,13 @@ $(document).ready(function () {
       oNbCard++;
       zIndex++;
 
-      if ( oNbCard == 10){
+      if ( oNbCard == parseInt(num_card)){
         setTimeout(function() {
           $("#tarot-section").hide()
           $("#loader-animation").show()
         },3300)
         setTimeout(function() {
-              var redireccionaA = page_redirect;
-              window.location = redireccionaA
+              $('.send-form').submit()
         },5000)   
       }
 

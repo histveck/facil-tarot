@@ -1,9 +1,9 @@
-<h2 class="text-center">Usted debe elegir 10 cartas</h2>
+<h2 class="text-center">Usted debe elegir <?php echo $facil_tarot_atts['num_card'] ?> cartas</h2>
 <section class="tarot-section" id="tarot-section">
     <div class="container">
         <div class="row row-card pt-5 pb-5">
             <div class="col-md-12">
-                <form class="send-form" method="POST">
+                <form action="<?php echo $page_link ?>" class="send-form" method="POST">
                     <input type="hidden" name="card-1" value="">
                     <input type="hidden" name="card-2" value="">
                     <input type="hidden" name="card-3" value="">
@@ -16,7 +16,7 @@
                     <input type="hidden" name="card-10" value="">
                 </form>
 
-                <div class="card border-0">
+                <div id="cartas-list" data-num-card="<?php echo $facil_tarot_atts['num_card'] ?>" class="card border-0">
 
                     <ul class="inline">
                         <li id="card1" data-rank="">
