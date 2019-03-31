@@ -55,7 +55,7 @@ function facil_tarot_shortcode($atts = [], $content = null, $tag = '')
     $page_link = get_page_link($facil_tarot_atts['id_page']);
     // return output
     $tarot_index = include( plugin_dir_path(__FILE__).'/public_html/index.php');
-    return $tarot_index;
+    //return $tarot_index;
 }
 
 
