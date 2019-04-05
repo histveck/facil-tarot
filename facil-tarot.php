@@ -14,6 +14,7 @@ function wpb_hook_javascript() {
     ?>
         <script type="text/javascript">
           var path_img ="<?php echo plugins_url('/img/back-card.png', __FILE__ ); ?>"
+          var path_img_runa ="<?php echo plugins_url('/img/back-runa.jpg', __FILE__ ); ?>"
         </script>
     <?php
 }
@@ -51,8 +52,10 @@ function facil_tarot_shortcode($atts = [], $content = null, $tag = '')
                                      'num_card' =>10,
                                      'id_page' =>0,
                                      'url_page'=>'',
+                                     'type_card'=>0
                                  ], $atts, $tag);
     $page_link = get_page_link($facil_tarot_atts['id_page']);
+    $type_card = $facil_tarot_atts['type_card'];
     // return output
     $tarot_index = include( plugin_dir_path(__FILE__).'/public_html/index.php');
 }

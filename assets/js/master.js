@@ -1,5 +1,6 @@
 $(document).ready(function () {
   var num_card=$("#cartas-list").data('num-card')
+  var tipo_card=$("#cartas-list").data('tipo-card')
   var oWindowWidth  = $(window).width(),
       oWindowHeight = $(window).height(),
       oNbCard       = 1,
@@ -68,8 +69,12 @@ $(document).ready(function () {
         }
 
         $('#card' + Numero).attr('data-rank', Aleatoire);
-
-        Element.innerHTML = '<a href=""> <img src="'+path_img+'" alt="card" class="back-card"> ' + '<img src="'+path_img+'" alt="card" class="hidden-card"> </a>'
+        if (tipo_card==0) {
+          path_card =  path_img
+        }else{
+          path_card = path_img_runa
+        }
+        Element.innerHTML = '<a href=""> <img src="'+path_card+'" alt="card" class="back-card"> ' + '<img src="'+path_card+'" alt="card" class="hidden-card"> </a>'
 
       }
       TirageEffectue[Numero] = true;

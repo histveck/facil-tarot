@@ -17,7 +17,7 @@
                     <input type="hidden" name="card-10" value="">
                 </form>
 
-                <div id="cartas-list" data-num-card="<?php echo $facil_tarot_atts['num_card'] ?>" class="card border-0">
+                <div id="cartas-list" data-tipo-card="<?php echo $type_card ?>" data-num-card="<?php echo $facil_tarot_atts['num_card'] ?>" class="card border-0">
 
                     <ul class="inline">
                         <li id="card1" data-rank="">
