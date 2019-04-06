@@ -172,9 +172,11 @@
         </div>
     </div>
 </section>
-<div style="display: none;" id="loader-animation" class="col-lg-12 col-md-12 text-center">
-    <div class="mensaje mb-3 pb-3">
-        <h1 style="color: white">Cargando</h1>
+
+
+<div style="display: none;" id="loader-animation" class="col-lg-12 col-md-12 text-center loader-box">
+    <div class="mb-4 pb-3">
+        <h1 class="title-mensaje">Interpretando...</h1>
     </div>
     <div class="pre-loader">
         <span></span>
