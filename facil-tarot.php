@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Facil Tarot
-Plugin URI: https://www.tarotinteractivo.com/tarot/
+Plugin URI: https://stackcreativo.com.ve/
 Description: Plugin de Tarot, para activarlo en cualquier página usar el shortcode: [facil_tarot num_card=NUM id_page=ID]
 Version: 1.0
 Author: Luis A, Dervins Maswer & Anderson Hernández
